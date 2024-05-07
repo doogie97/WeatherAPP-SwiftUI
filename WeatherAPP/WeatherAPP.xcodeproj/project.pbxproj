@@ -11,6 +11,7 @@
 		C69AEE262BEA6967005E16E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69AEE252BEA6967005E16E6 /* Assets.xcassets */; };
 		C69AEE292BEA6967005E16E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69AEE282BEA6967005E16E6 /* Preview Assets.xcassets */; };
 		C69AEE352BEA69ED005E16E6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69AEE342BEA69ED005E16E6 /* MainView.swift */; };
+		C6C5058C2BEA6E180055569A /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5058B2BEA6E180055569A /* CurrentWeather.swift */; };
 		C6C5058E2BEA6EBF0055569A /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5058D2BEA6EBF0055569A /* Double+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +21,7 @@
 		C69AEE252BEA6967005E16E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C69AEE282BEA6967005E16E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C69AEE342BEA69ED005E16E6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C6C5058B2BEA6E180055569A /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		C6C5058D2BEA6EBF0055569A /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 		C69AEE302BEA69BC005E16E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C6C5058B2BEA6E180055569A /* CurrentWeather.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C69AEE222BEA6966005E16E6 /* WeatherAPPApp.swift in Sources */,
+				C6C5058C2BEA6E180055569A /* CurrentWeather.swift in Sources */,
 				C6C5058E2BEA6EBF0055569A /* Double+Extension.swift in Sources */,
 				C69AEE352BEA69ED005E16E6 /* MainView.swift in Sources */,
 			);
