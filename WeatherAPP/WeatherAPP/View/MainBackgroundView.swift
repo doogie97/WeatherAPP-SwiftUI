@@ -16,7 +16,7 @@ struct MainBackgroundView: View {
                 .frame(width: reader.size.width)
                 .ignoresSafeArea()
                 .overlay {
-                    Color.black.opacity(0.3)
+                    Color.black.opacity(0.5)
                         .ignoresSafeArea()
                 }
         }
