@@ -41,9 +41,9 @@ struct WeatherAPPWidget: Widget {
     }
 }
 
-#Preview(as: .systemSmall) {
-    WeatherAPPWidget()
-} timeline: {
-    SimpleEntry(date: .now, emoji: "😀")
-    SimpleEntry(date: .now, emoji: "🤩")
+struct WeatherAPPWidget_Previews: PreviewProvider {
+    static var previews: some View {
+        WeatherAPPWidgetEntryView(entry: Provider.Entry(data: .preview))
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+    }
 }
