@@ -14,6 +14,9 @@ struct MainView: View {
             MainBackgroundView()
             WeatherContentView()
         }
+        .onAppear {
+            weatherService.fetch()
+        }
     }
 }
 

@@ -38,4 +38,21 @@ class WeatherService: NSObject, ObservableObject {
         service.forecaseList = Forecast.preview
         return service
     }
+    
+    func fetch() {
+        guard !isPreviewService else {
+            return
+        }
+        
+        switch locationManager.authorizationStatus {
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+        case .authorizedAlways, .authorizedWhenInUse, .authorized:
+            locationManager.requestLocation()
+        case .denied, .restricted:
+            lastError = "위치 서비스 사용 권한이 없습니다."
+        default:
+            lastError = "알 수 없는 오류가 발생했습니다."
+        }
+    }
 }
