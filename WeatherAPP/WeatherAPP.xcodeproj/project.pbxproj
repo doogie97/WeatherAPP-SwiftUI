@@ -27,6 +27,7 @@
 		C68641C82BEBC9B500062CA4 /* WidgetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68641C62BEBC96700062CA4 /* WidgetData.swift */; };
 		C68641CB2BEBCA2800062CA4 /* String+WeatherSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6838D022BEB262800079212 /* String+WeatherSymbol.swift */; };
 		C68641CC2BEBCA2800062CA4 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C5058D2BEA6EBF0055569A /* Double+Extension.swift */; };
+		C68641D32BEBCD5D00062CA4 /* WeatherEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68641D22BEBCD5D00062CA4 /* WeatherEntryView.swift */; };
 		C69AEE222BEA6966005E16E6 /* WeatherAPPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69AEE212BEA6966005E16E6 /* WeatherAPPApp.swift */; };
 		C69AEE262BEA6967005E16E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69AEE252BEA6967005E16E6 /* Assets.xcassets */; };
 		C69AEE292BEA6967005E16E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69AEE282BEA6967005E16E6 /* Preview Assets.xcassets */; };
@@ -84,6 +85,7 @@
 		C68641C02BEBC7B500062CA4 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		C68641C42BEBC94100062CA4 /* WeatherEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEntry.swift; sourceTree = "<group>"; };
 		C68641C62BEBC96700062CA4 /* WidgetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetData.swift; sourceTree = "<group>"; };
+		C68641D22BEBCD5D00062CA4 /* WeatherEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEntryView.swift; sourceTree = "<group>"; };
 		C69AEE1E2BEA6966005E16E6 /* WeatherAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69AEE212BEA6966005E16E6 /* WeatherAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPPApp.swift; sourceTree = "<group>"; };
 		C69AEE252BEA6967005E16E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				C68641B22BEBC73800062CA4 /* WeatherAPPWidgetBundle.swift */,
 				C68641B42BEBC73800062CA4 /* WeatherAPPWidget.swift */,
 				C68641C02BEBC7B500062CA4 /* Provider.swift */,
+				C68641CE2BEBCCC200062CA4 /* View */,
 				C68641C32BEBC93600062CA4 /* Model */,
 				C68641B62BEBC73900062CA4 /* Assets.xcassets */,
 				C68641B82BEBC73900062CA4 /* Info.plist */,
@@ -157,6 +160,14 @@
 				C68641C42BEBC94100062CA4 /* WeatherEntry.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C68641CE2BEBCCC200062CA4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C68641D22BEBCD5D00062CA4 /* WeatherEntryView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C69AEE152BEA6966005E16E6 = {
@@ -350,6 +361,7 @@
 				C68641C12BEBC7B500062CA4 /* Provider.swift in Sources */,
 				C68641B32BEBC73800062CA4 /* WeatherAPPWidgetBundle.swift in Sources */,
 				C68641C82BEBC9B500062CA4 /* WidgetData.swift in Sources */,
+				C68641D32BEBCD5D00062CA4 /* WeatherEntryView.swift in Sources */,
 				C68641C52BEBC94100062CA4 /* WeatherEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

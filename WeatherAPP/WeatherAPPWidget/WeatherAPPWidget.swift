@@ -8,23 +8,12 @@
 import WidgetKit
 import SwiftUI
 
-struct WeatherAPPWidgetEntryView : View {
-    var entry: Provider.Entry
-
-    var body: some View {
-        VStack {
-            Text(entry.data.location)
-            Text(entry.data.temperature)
-        }
-    }
-}
-
 struct WeatherAPPWidget: Widget {
     let kind: String = "WeatherAPPWidget"
     
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            WeatherAPPWidgetEntryView(entry: entry)
+            WeatherEntryView(entry: entry)
                 .padding()
                 .background()
         }
@@ -35,7 +24,7 @@ struct WeatherAPPWidget: Widget {
 
 struct WeatherAPPWidget_Previews: PreviewProvider {
     static var previews: some View {
-        WeatherAPPWidgetEntryView(entry: Provider.Entry(data: .preview))
+        WeatherEntryView(entry: Provider.Entry(data: .preview))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
