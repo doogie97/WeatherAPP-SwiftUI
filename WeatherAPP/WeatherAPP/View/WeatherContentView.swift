@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct WeatherContentView: View {
+    @EnvironmentObject var weatherService: WeatherService
     var body: some View {
         VStack {
-            Text("강남역")
+            Text(weatherService.currentLocaion ?? "알 수 없음")
                 .font(.title2)
                 .foregroundStyle(.white)
                 .frame(maxWidth: .infinity)
@@ -20,7 +21,7 @@ struct WeatherContentView: View {
                 ScrollView(showsIndicators: false) {
                     VStack {
                         Color.clear
-                        CurrentWeatherView(currentWeather: CurrentWeather.preview)
+                        CurrentWeatherView(currentWeather: weatherService.currentWeather)
                     }
                     .frame(height: reader.size.height)
                     
@@ -36,4 +37,5 @@ struct WeatherContentView: View {
 #Preview {
     WeatherContentView()
         .preferredColorScheme(.dark)
+        .environmentObject(WeatherService.preview)
 }

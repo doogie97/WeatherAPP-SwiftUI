@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct MainView: View {
+    @EnvironmentObject var weatherService: WeatherService
     var body: some View {
         ZStack {
             MainBackgroundView()
             WeatherContentView()
+        }
+        .onAppear {
+            weatherService.fetch()
         }
     }
 }
 
 #Preview {
     MainView()
+        .environmentObject(WeatherService.preview)
 }

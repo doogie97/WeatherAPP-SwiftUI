@@ -29,4 +29,24 @@ extension CurrentWeather {
                               sunsetTime: "우후 6:00",
                               forecastedDate: .now)
     }
+    
+    init?(data: CurrentWeatherDTO) {
+        guard let weatherInfo = data.weather?.first else {
+            return nil
+        }
+        
+        icon = weatherInfo.icon?.weatherImagename ?? "circle"
+        weather = weatherInfo.description ?? "알 수 없음"
+        temperature = data.main?.temp?.temperatureString ?? ""
+        maxTemperature = data.main?.temp_max?.temperatureString ?? ""
+        minTemperature = data.main?.temp_min?.temperatureString ?? ""
+        
+        var date = Date(timeIntervalSince1970: TimeInterval(data.sys?.sunrise ?? 0))
+        sunriseTime = date.formatted(.dateTime.hour().minute())
+        
+        date = Date(timeIntervalSince1970: TimeInterval(data.sys?.sunset ?? 0))
+        sunsetTime = date.formatted(.dateTime.hour().minute())
+        
+        forecastedDate = Date(timeIntervalSince1970: TimeInterval(data.date ?? 0))
+    }
 }
