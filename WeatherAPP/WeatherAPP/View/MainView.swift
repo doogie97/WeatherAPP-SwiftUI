@@ -16,6 +16,8 @@ struct MainView: View {
             if weatherService.isUpdating {
                 ProgressView()
                     .tint(.white)
+            } else if let _ = weatherService.lastError {
+                ErrorView()
             } else {
                 WeatherContentView()
             }

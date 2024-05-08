@@ -48,14 +48,13 @@ extension WeatherService: CLLocationManagerDelegate {
         }
         
         Task {
+            await fetchCurrentWeather(location: location)
+            await fetchForeCastList(location: location)
             let locationStr = try await updateAddress(from: location)
             await MainActor.run {
                 currentLocaion = locationStr
+                isUpdating = false
             }
-            await fetchCurrentWeather(location: location)
-            await fetchForeCastList(location: location)
-            
-            isUpdating = false
         }
     }
     
