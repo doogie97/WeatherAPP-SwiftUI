@@ -13,6 +13,7 @@
 		C6838D062BEB285200079212 /* CurrentWeatherDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6838D052BEB285200079212 /* CurrentWeatherDTO.swift */; };
 		C6838D082BEB28EB00079212 /* WeatherService+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6838D072BEB28EB00079212 /* WeatherService+API.swift */; };
 		C6838D0A2BEB2A7E00079212 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6838D092BEB2A7E00079212 /* APIError.swift */; };
+		C6838D0E2BEB5CFB00079212 /* ForecastDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6838D0D2BEB5CFB00079212 /* ForecastDTO.swift */; };
 		C69AEE222BEA6966005E16E6 /* WeatherAPPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69AEE212BEA6966005E16E6 /* WeatherAPPApp.swift */; };
 		C69AEE262BEA6967005E16E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69AEE252BEA6967005E16E6 /* Assets.xcassets */; };
 		C69AEE292BEA6967005E16E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69AEE282BEA6967005E16E6 /* Preview Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		C6838D052BEB285200079212 /* CurrentWeatherDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherDTO.swift; sourceTree = "<group>"; };
 		C6838D072BEB28EB00079212 /* WeatherService+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherService+API.swift"; sourceTree = "<group>"; };
 		C6838D092BEB2A7E00079212 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		C6838D0D2BEB5CFB00079212 /* ForecastDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDTO.swift; sourceTree = "<group>"; };
 		C69AEE1E2BEA6966005E16E6 /* WeatherAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69AEE212BEA6966005E16E6 /* WeatherAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPPApp.swift; sourceTree = "<group>"; };
 		C69AEE252BEA6967005E16E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				C6838D052BEB285200079212 /* CurrentWeatherDTO.swift */,
+				C6838D0D2BEB5CFB00079212 /* ForecastDTO.swift */,
 				C6838D092BEB2A7E00079212 /* APIError.swift */,
 			);
 			path = Model;
@@ -228,6 +231,7 @@
 				C6C5058E2BEA6EBF0055569A /* Double+Extension.swift in Sources */,
 				C6838D0A2BEB2A7E00079212 /* APIError.swift in Sources */,
 				C6C505982BEA75650055569A /* ForecastView.swift in Sources */,
+				C6838D0E2BEB5CFB00079212 /* ForecastDTO.swift in Sources */,
 				C6838D002BEB1D4A00079212 /* WeatherService+Location.swift in Sources */,
 				C69AEE352BEA69ED005E16E6 /* MainView.swift in Sources */,
 				C6838D082BEB28EB00079212 /* WeatherService+API.swift in Sources */,

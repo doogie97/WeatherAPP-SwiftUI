@@ -5,6 +5,7 @@
 //  Created by Doogie on 5/8/24.
 //
 
+import Foundation
 import CoreLocation
 
 extension WeatherService: CLLocationManagerDelegate {
@@ -43,8 +44,12 @@ extension WeatherService: CLLocationManagerDelegate {
         }
         
         Task {
-            currentLocaion = try await updateAddress(from: location)
+            let locationStr = try await updateAddress(from: location)
+            await MainActor.run {
+                currentLocaion = locationStr
+            }
             await fetchCurrentWeather(location: location)
+            await fetchForeCastList(location: location)
         }
     }
     

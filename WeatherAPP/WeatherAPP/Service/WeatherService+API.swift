@@ -9,19 +9,38 @@ import Foundation
 import CoreLocation
 
 extension WeatherService {
+    enum ApiType: String {
+        case forecast
+        case weather
+    }
+    
+    @MainActor
     func fetchCurrentWeather(location: CLLocation) async {
         do {
-            self.currentWeather = CurrentWeather(data: try await fetch(location: location))
-            print(self.currentWeather)
+            let dto: CurrentWeatherDTO = try await fetch(location: location,
+                                                         apiType: .weather)
+            self.currentWeather = CurrentWeather(data: dto)
         } catch {
             lastError = "API 요청 실패"
         }
     }
     
-    private func fetch(location: CLLocation) async throws -> CurrentWeatherDTO {
-        var components = URLComponents(string: "https://api.openweathermap.org/data/2.5/weather")
+    @MainActor
+    func fetchForeCastList(location: CLLocation) async {
+        do {
+            let dto: ForecastDTO = try await fetch(location: location, apiType: .forecast)
+            self.forecaseList = dto.list?.compactMap {
+                return Forecast(data: $0)
+            }
+        } catch {
+            lastError = "API 요청 실패"
+        }
+    }
+    
+    private func fetch<T: Decodable>(location: CLLocation, apiType: ApiType) async throws -> T {
+        var components = URLComponents(string: "https://api.openweathermap.org/data/2.5/\(apiType.rawValue)")
         components?.queryItems = [
-            URLQueryItem(name: "appid", value: self.apiKey),
+            URLQueryItem(name: "appid", value: Self.apiKey),
             URLQueryItem(name: "units", value: "metric"),
             URLQueryItem(name: "lang", value: "kr"),
             URLQueryItem(name: "lat", value: "\(location.coordinate.latitude)"),
@@ -43,7 +62,7 @@ extension WeatherService {
         }
         
         let decoder = JSONDecoder()
-        let result = try decoder.decode(CurrentWeatherDTO.self, from: data)
+        let result = try decoder.decode(T.self, from: data)
         return result
     }
 }

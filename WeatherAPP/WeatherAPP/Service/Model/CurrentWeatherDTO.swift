@@ -8,7 +8,7 @@
 import Foundation
 
 struct CurrentWeatherDTO: Decodable {
-    let date: Double?
+    let dt: Double?
     let weather: [Weather]?
     let main: Main?
     let sys: Sys?

@@ -35,4 +35,16 @@ extension Forecast {
                             forecasetedDate: .now)
         }
     }
+    
+    init?(data: ForecastDTO.ListItem) {
+        var date = Date(timeIntervalSince1970: TimeInterval((data.dt ?? 0)))
+        self.date = date.formatted(.dateTime.month().day())
+        self.time = date.formatted(.dateTime.hour().minute())
+        self.icon = (data.weather?.first?.icon ?? "").weatherImagename
+        self.weather = data.weather?.first?.description ?? ""
+        self.temperature = data.main?.temp?.temperatureString ?? ""
+        self.minTemperature = data.main?.temp_min?.temperatureString ?? ""
+        self.maxTemperature = data.main?.temp_max?.temperatureString ?? ""
+        self.forecasetedDate = date
+    }
 }

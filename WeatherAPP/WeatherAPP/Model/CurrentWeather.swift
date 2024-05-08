@@ -47,6 +47,6 @@ extension CurrentWeather {
         date = Date(timeIntervalSince1970: TimeInterval(data.sys?.sunset ?? 0))
         sunsetTime = date.formatted(.dateTime.hour().minute())
         
-        forecastedDate = Date(timeIntervalSince1970: TimeInterval(data.date ?? 0))
+        forecastedDate = Date(timeIntervalSince1970: TimeInterval(data.dt ?? 0))
     }
 }
