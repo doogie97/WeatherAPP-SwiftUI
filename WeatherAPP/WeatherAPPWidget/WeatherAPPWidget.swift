@@ -17,8 +17,9 @@ struct WeatherAPPWidget: Widget {
                 .padding()
                 .background()
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("날씨 위젯")
+        .description("현재 날씨를 확인할 위젯을 선택해 주세요.")
+        .supportedFamilies([.systemSmall])
     }
 }
 
