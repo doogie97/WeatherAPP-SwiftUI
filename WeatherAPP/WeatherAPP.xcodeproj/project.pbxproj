@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C6838CFE2BEB1BFF00079212 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6838CFD2BEB1BFF00079212 /* WeatherService.swift */; };
 		C6838D002BEB1D4A00079212 /* WeatherService+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6838CFF2BEB1D4A00079212 /* WeatherService+Location.swift */; };
+		C6838D032BEB262800079212 /* String+WeatherSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6838D022BEB262800079212 /* String+WeatherSymbol.swift */; };
 		C69AEE222BEA6966005E16E6 /* WeatherAPPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69AEE212BEA6966005E16E6 /* WeatherAPPApp.swift */; };
 		C69AEE262BEA6967005E16E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69AEE252BEA6967005E16E6 /* Assets.xcassets */; };
 		C69AEE292BEA6967005E16E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69AEE282BEA6967005E16E6 /* Preview Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		C6838CFD2BEB1BFF00079212 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		C6838CFF2BEB1D4A00079212 /* WeatherService+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherService+Location.swift"; sourceTree = "<group>"; };
 		C6838D012BEB22F800079212 /* TestLoaction.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestLoaction.gpx; sourceTree = "<group>"; };
+		C6838D022BEB262800079212 /* String+WeatherSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+WeatherSymbol.swift"; sourceTree = "<group>"; };
 		C69AEE1E2BEA6966005E16E6 /* WeatherAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69AEE212BEA6966005E16E6 /* WeatherAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPPApp.swift; sourceTree = "<group>"; };
 		C69AEE252BEA6967005E16E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				C6C5058D2BEA6EBF0055569A /* Double+Extension.swift */,
+				C6838D022BEB262800079212 /* String+WeatherSymbol.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6838CFE2BEB1BFF00079212 /* WeatherService.swift in Sources */,
+				C6838D032BEB262800079212 /* String+WeatherSymbol.swift in Sources */,
 				C6C505942BEA74DD0055569A /* WeatherContentView.swift in Sources */,
 				C6C505962BEA75410055569A /* CurrentWeatherView.swift in Sources */,
 				C69AEE222BEA6966005E16E6 /* WeatherAPPApp.swift in Sources */,
