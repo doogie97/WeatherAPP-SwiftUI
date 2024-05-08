@@ -11,7 +11,7 @@ struct WeatherContentView: View {
     @EnvironmentObject var weatherService: WeatherService
     var body: some View {
         VStack {
-            Text("강남역")
+            Text(weatherService.currentLocaion ?? "알 수 없음")
                 .font(.title2)
                 .foregroundStyle(.white)
                 .frame(maxWidth: .infinity)
