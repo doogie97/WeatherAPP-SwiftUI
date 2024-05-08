@@ -9,6 +9,8 @@ import Foundation
 import CoreLocation
 
 class WeatherService: NSObject, ObservableObject {
+    let apiKey = "f6aadde19222caad1dd9dc2ae340c89e"
+    
     let locationManager: CLLocationManager
     
     @Published var currentLocaion: String?
