@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct ForecastView: View {
+    @EnvironmentObject var weatherService: WeatherService
+    
     var body: some View {
-        ForEach(Forecast.preview) { forecase in
+        ForEach(weatherService.forecaseList ?? []) { forecase in
             HStack {
                 VStack(alignment: .leading) {
                     Text(forecase.date)
@@ -39,4 +41,5 @@ struct ForecastView: View {
 #Preview {
     ForecastView()
         .preferredColorScheme(.dark)
+        .environmentObject(WeatherService.preview)
 }

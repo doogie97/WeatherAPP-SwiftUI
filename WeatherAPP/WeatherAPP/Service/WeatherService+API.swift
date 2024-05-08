@@ -23,6 +23,18 @@ extension WeatherService {
         }
     }
     
+    func fetchForeCastList(location: CLLocation) async {
+        do {
+            let dto: ForecastDTO = try await fetch(location: location, apiType: .forecast)
+            self.forecaseList = dto.list?.compactMap {
+                return Forecast(data: $0)
+            }
+            
+            print(self.forecaseList)
+        } catch {
+            lastError = "API 요청 실패"
+        }
+    }
     
     private func fetch<T: Decodable>(location: CLLocation, apiType: ApiType) async throws -> T {
         var components = URLComponents(string: "https://api.openweathermap.org/data/2.5/\(apiType.rawValue)")
