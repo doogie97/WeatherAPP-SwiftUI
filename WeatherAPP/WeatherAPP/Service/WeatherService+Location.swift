@@ -29,7 +29,7 @@ extension WeatherService: CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         switch manager.authorizationStatus {
         case .authorizedAlways, .authorizedWhenInUse:
-            locationManager.requestLocation()
+            locationManager.startUpdatingLocation()
         case .notDetermined:
             lastError = "위치 서비스 사용 권한을 확인할 수 없습니다."
             isUpdating = false
@@ -65,12 +65,9 @@ extension WeatherService: CLLocationManagerDelegate {
         if let location = locations.last {
             process(location: location)
         }
-        
-        manager.stopUpdatingLocation()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        manager.stopUpdatingLocation()
         lastError = error.localizedDescription
         isUpdating = false
     }
