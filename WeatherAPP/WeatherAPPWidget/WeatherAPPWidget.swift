@@ -18,17 +18,16 @@ struct WeatherAPPWidget: Widget {
               .containerBackground(for: .widget) {
                   Color.clear
               }
-              .padding()
               .background()
       } else {
           WeatherEntryView(entry: entry)
-          .padding()
           .background()
       }
     }
     .configurationDisplayName("날씨 위젯")
     .description("현재 날씨를 확인할 위젯을 선택해 주세요.")
     .supportedFamilies([.systemSmall])
+    .contentMarginsDisabled()
   }
 }
 
