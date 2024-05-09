@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71919EF42BEC7082002A4873 /* FileManager+SharedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71919EF32BEC7082002A4873 /* FileManager+SharedContainer.swift */; };
+		71919EF52BEC708B002A4873 /* FileManager+SharedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71919EF32BEC7082002A4873 /* FileManager+SharedContainer.swift */; };
 		C6838CFE2BEB1BFF00079212 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6838CFD2BEB1BFF00079212 /* WeatherService.swift */; };
 		C6838D002BEB1D4A00079212 /* WeatherService+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6838CFF2BEB1D4A00079212 /* WeatherService+Location.swift */; };
 		C6838D032BEB262800079212 /* String+WeatherSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6838D022BEB262800079212 /* String+WeatherSymbol.swift */; };
@@ -66,6 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		71919EF32BEC7082002A4873 /* FileManager+SharedContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+SharedContainer.swift"; sourceTree = "<group>"; };
 		C6838CFD2BEB1BFF00079212 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		C6838CFF2BEB1D4A00079212 /* WeatherService+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherService+Location.swift"; sourceTree = "<group>"; };
 		C6838D012BEB22F800079212 /* TestLoaction.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestLoaction.gpx; sourceTree = "<group>"; };
@@ -173,6 +176,7 @@
 		C69AEE152BEA6966005E16E6 = {
 			isa = PBXGroup;
 			children = (
+				71919EF22BEC7059002A4873 /* WeatherAPPWidgetExtension.entitlements */,
 				C69AEE202BEA6966005E16E6 /* WeatherAPP */,
 				C68641B12BEBC73800062CA4 /* WeatherAPPWidget */,
 				C68641AC2BEBC73800062CA4 /* Frameworks */,
@@ -192,6 +196,7 @@
 		C69AEE202BEA6966005E16E6 /* WeatherAPP */ = {
 			isa = PBXGroup;
 			children = (
+				71919EF12BEC6F2B002A4873 /* WeatherAPP.entitlements */,
 				C69AEE212BEA6966005E16E6 /* WeatherAPPApp.swift */,
 				C69AEE332BEA69E0005E16E6 /* View */,
 				C69AEE312BEA69C3005E16E6 /* Service */,
@@ -237,6 +242,7 @@
 			children = (
 				C6C5058D2BEA6EBF0055569A /* Double+Extension.swift */,
 				C6838D022BEB262800079212 /* String+WeatherSymbol.swift */,
+				71919EF32BEC7082002A4873 /* FileManager+SharedContainer.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -359,6 +365,7 @@
 				C68641CB2BEBCA2800062CA4 /* String+WeatherSymbol.swift in Sources */,
 				C68641CC2BEBCA2800062CA4 /* Double+Extension.swift in Sources */,
 				C68641C12BEBC7B500062CA4 /* Provider.swift in Sources */,
+				71919EF52BEC708B002A4873 /* FileManager+SharedContainer.swift in Sources */,
 				C68641B32BEBC73800062CA4 /* WeatherAPPWidgetBundle.swift in Sources */,
 				C68641C82BEBC9B500062CA4 /* WidgetData.swift in Sources */,
 				C68641D32BEBCD5D00062CA4 /* WeatherEntryView.swift in Sources */,
@@ -376,6 +383,7 @@
 				C6C505942BEA74DD0055569A /* WeatherContentView.swift in Sources */,
 				C6C505962BEA75410055569A /* CurrentWeatherView.swift in Sources */,
 				C68641662BEBB81500062CA4 /* ErrorView.swift in Sources */,
+				71919EF42BEC7082002A4873 /* FileManager+SharedContainer.swift in Sources */,
 				C6838D062BEB285200079212 /* CurrentWeatherDTO.swift in Sources */,
 				C69AEE222BEA6966005E16E6 /* WeatherAPPApp.swift in Sources */,
 				C6C5058C2BEA6E180055569A /* CurrentWeather.swift in Sources */,
@@ -407,6 +415,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WeatherAPPWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SD8J3B58T9;
@@ -435,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WeatherAPPWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SD8J3B58T9;
@@ -583,6 +593,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WeatherAPP/WeatherAPP.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherAPP/Preview Content\"";
@@ -616,6 +627,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WeatherAPP/WeatherAPP.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherAPP/Preview Content\"";
