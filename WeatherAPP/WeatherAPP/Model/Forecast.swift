@@ -37,9 +37,13 @@ extension Forecast {
     }
     
     init?(data: ForecastDTO.ListItem) {
-        var date = Date(timeIntervalSince1970: TimeInterval((data.dt ?? 0)))
-        self.date = date.formatted(.dateTime.month().day())
-        self.time = date.formatted(.dateTime.hour().minute())
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ko_KR")
+        let date = Date(timeIntervalSince1970: TimeInterval((data.dt ?? 0)))
+        dateFormatter.setLocalizedDateFormatFromTemplate("MMMd")
+        self.date = dateFormatter.string(from: date)
+        dateFormatter.setLocalizedDateFormatFromTemplate("jm")
+        self.time = dateFormatter.string(from: date)
         self.icon = (data.weather?.first?.icon ?? "").weatherImagename
         self.weather = data.weather?.first?.description ?? ""
         self.temperature = data.main?.temp?.temperatureString ?? ""
