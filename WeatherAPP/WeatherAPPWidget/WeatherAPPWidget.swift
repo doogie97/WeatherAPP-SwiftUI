@@ -33,8 +33,14 @@ struct WeatherAPPWidget: Widget {
 }
 
 @available(iOS 17.0, *)
-#Preview("KxWidgetWidget", as: .systemSmall) {
+#Preview("WeatherAPPWidget", as: .systemSmall) {
   WeatherAPPWidget()
 } timeline: {
   WeatherEntry(data: .preview)
+}
+struct WeatherAPPWidget_Previews: PreviewProvider {
+  static var previews: some View {
+    WeatherEntryView(entry: Provider.Entry(data: .preview))
+      .previewContext(WidgetPreviewContext(family: .systemSmall))
+  }
 }
