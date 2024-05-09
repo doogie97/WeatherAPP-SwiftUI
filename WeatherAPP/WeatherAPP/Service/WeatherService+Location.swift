@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreLocation
+import WidgetKit
 
 extension WeatherService: CLLocationManagerDelegate {
     private func updateAddress(from location: CLLocation) async throws -> String {
@@ -51,6 +52,8 @@ extension WeatherService: CLLocationManagerDelegate {
             await fetchCurrentWeather(location: location)
             await fetchForeCastList(location: location)
             let locationStr = try await updateAddress(from: location)
+            WidgetData.wirte(location: locationStr, currentWeather: currentWeather, forecast: forecaseList)
+            WidgetCenter.shared.reloadAllTimelines()
             await MainActor.run {
                 currentLocaion = locationStr
                 isUpdating = false
